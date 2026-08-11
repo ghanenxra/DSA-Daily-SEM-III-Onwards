@@ -16,4 +16,4 @@ class Solution:
             pointerA = pointerA.next if pointerA else headB
             pointerB = pointerB.next if pointerB else headA
             
-        return pointerA
+        return pointerB
