@@ -15,16 +15,7 @@
 
 class Solution:
     def preorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
-        result = []
         if not root:
             return []
-        
         else:
             return [root.val] + self.preorderTraversal(root.left) + self.preorderTraversal(root.right)
-
-        # else:
-        #     while root:
-        #         result.append(root.val)
-        #         self.preorderTraversal(root.left)
-        #         self.preorderTraversal(root.right)
-        #     return result
