@@ -8,7 +8,7 @@
 class Solution(object):
     def lowestCommonAncestor(self, root, p, q):
         if root is None:
-            return root
+            return None
         if root==p or root==q:
             return root
         
