@@ -7,18 +7,10 @@
 
 class Solution(object):
     def lowestCommonAncestor(self, root, p, q):
-        if root is None:
-            return None
-        if root==p or root==q:
-            return root
-        
-        i = self.lowestCommonAncestor(root.left, p, q)
-        j = self.lowestCommonAncestor(root.right, p, q)
-         
-        if i and j:
-            return root
-
-        if j:
-            return j
+        if root.val > p.val and root.val > q.val:
+            return self.lowestCommonAncestor(root.left, p, q)
+        if root.val < p.val and root.val < q.val:
+            return self.lowestCommonAncestor(root.right, p, q)
         else:
-            return i
+            return root
+            
