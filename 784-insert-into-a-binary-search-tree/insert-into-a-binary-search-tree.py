@@ -18,12 +18,12 @@ class Solution(object):
         temp = root
         while temp:
             if temp.val < val:
-                if temp.right is  None:
+                if temp.right is None:
                     temp.right = new_node
                     break
                 temp = temp.right
             else:
-                if temp.left is  None:
+                if temp.left is None:
                     temp.left = new_node
                     break
                 temp = temp.left
