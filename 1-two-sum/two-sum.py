@@ -6,3 +6,6 @@ class Solution:
             if check in checked:
                 return [checked[check],i]
             checked[nums[i]]=i
+        
+    
+
