@@ -8,20 +8,36 @@ class Node:
 
 class Solution:
     def cloneGraph(self, node: Optional['Node']) -> Optional['Node']:
+        # if not node:
+        #     return None
+
+        # old_to_new={}
+
+        # def dfs(curr):
+        #     if curr in old_to_new:
+        #         return old_to_new[curr]
+            
+        #     copy=Node(curr.val)
+        #     old_to_new[curr]=copy
+
+        #     for neighbor in curr.neighbors:
+        #         copy.neighbors.append(dfs(neighbor))
+        #     return copy
+        # return dfs(node)
+
         if not node:
             return None
-
-        old_to_new={}
+        
+        cache={}
 
         def dfs(curr):
-            if curr in old_to_new:
-                return old_to_new[curr]
-            
-            copy=Node(curr.val)
-            old_to_new[curr]=copy
+            if curr in cache:
+                return cache[curr]
+
+            duplicate=Node(curr.val)
+            cache[curr]=duplicate
 
             for neighbor in curr.neighbors:
-                copy.neighbors.append(dfs(neighbor))
-            return copy
+                duplicate.neighbors.append(dfs(neighbor))
+            return duplicate
         return dfs(node)
-
