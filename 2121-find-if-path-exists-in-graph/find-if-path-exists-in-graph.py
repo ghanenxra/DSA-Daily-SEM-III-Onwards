@@ -10,7 +10,7 @@ class Solution:
             graph[v].append(u)
 
         queue=deque([source])
-        visited={source}
+        visited={source} #this is a set not a dict
 
         while queue:
             node=queue.popleft()
