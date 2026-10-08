@@ -1,4 +1,4 @@
-cache={}
+
 class Solution:
     def fib(self, n: int) -> int:
         # global cache
