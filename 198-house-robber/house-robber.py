@@ -4,6 +4,7 @@ class Solution:
             return nums[0]
         if len(nums)==2:
             return max(nums)
+            
         dp=[0]*len(nums)
         dp[0]=nums[0]
         dp[1]=max(nums[0], nums[1])
