@@ -1,28 +1,7 @@
 class Solution:
-    def maxSubArray(self, nums: List[int]) -> int:
-        current_sum = nums[0] 
-        max_sum = nums[0]
-
+    def maxSubArray(self, nums: list[int]) -> int:
+        dp=[0]*len(nums)
+        dp[0]=nums[0]
         for i in range(1, len(nums)):
-            current_sum = max(nums[i] , current_sum + nums[i])
-            max_sum = max(current_sum, max_sum)
-
-        return max_sum
-
-
-        # sum = 0
-        # n = len(nums)
-        # max_sum = float('-inf')
-        # for i in range(n):
-        #     if sum + nums[i] > nums[i]:
-        #         sum = sum + nums[i]
-        #     else:
-        #         sum = nums[i]
-        #     if sum > max_sum:
-        #         max_sum = sum
-        # return max_sum
-
-
-
-
-
+            dp[i]=max(dp[i-1]+nums[i],nums[i])
+        return max(dp)
