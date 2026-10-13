@@ -9,8 +9,3 @@ class Solution:
         return mt[m-1][n-1]
 
 
-        # count=0
-        # if m==0 and n==0:
-        #     return 0
-        
-
