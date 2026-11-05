@@ -7,6 +7,6 @@ class Solution:
                 if abs(i-j)<=d:
                     is_right=False
                     break
-            if is_right:
+            if is_right==True:
                 count+=1
         return count
