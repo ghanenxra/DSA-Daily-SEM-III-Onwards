@@ -11,6 +11,5 @@ class Solution:
                 l+=1
 
             unique_elements.add(s[t])
-
             maxx=max(maxx, t-l+1)
         return maxx
