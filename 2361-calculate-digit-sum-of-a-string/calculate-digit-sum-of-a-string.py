@@ -4,10 +4,8 @@ class Solution:
             new_string=[]
 
             for i in range(0,len(s),k):
-                chunk=s[i:i+k]
-                string_sum=str(sum(int(ch)for ch in chunk))
+                chunks=s[i:i+k]
+                string_sum=str(sum(int(ch) for ch in chunks))
                 new_string.append(string_sum)
-
             s="".join(new_string)
         return s
-
